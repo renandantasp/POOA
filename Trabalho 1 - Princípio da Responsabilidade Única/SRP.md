@@ -34,42 +34,42 @@ Uma possível solução para esse problema seria a criação de uma classe chama
 
 ```cpp
 class Favoritos{
-    private:
-        std::vector<Filme> filmes;
-        int numFilmes;    
+	private:
+		std::vector<Filme> filmes;
+		int numFilmes;    
 
-        std::vector<Serie> series;
-        int numSeries;
+		std::vector<Serie> series;
+		int numSeries;
 
-        std::vector<Jogo> jogos;        
-        int numJogos;
+		std::vector<Jogo> jogos;        
+		int numJogos;
     
 	public:
-        Favoritos();
-        bool adicionaFilme(std::string t, std::string d, std::string g, int a);
-        bool removeFilme(Filme& f);
+		Favoritos();
+		bool adicionaFilme(std::string t, std::string d, std::string g, int a);
+		bool removeFilme(Filme& f);
 		bool trocaFilme(int pos1, int pos2);
-        bool leFilme(Filme& f, int pos) const;
-        int  getNumFilmes() const;
-        bool imprimeFilme(int pos = 0) const;
-        void imprimeFilmes() const;
+		bool leFilme(Filme& f, int pos) const;
+		int  getNumFilmes() const;
+		bool imprimeFilme(int pos = 0) const;
+		void imprimeFilmes() const;
 
-        bool adicionaSerie(std::string t,std::string d,std::string g,int n,int a);
-        bool removeSerie(Serie& s);
+		bool adicionaSerie(std::string t,std::string d,std::string g,int n,int a);
+		bool removeSerie(Serie& s);
 		bool trocaSerie(int pos1, int pos2);
-        bool leSerie(Serie& s, int pos) const;
-        int  getNumSeries() const;
-        bool imprimeSerie(int pos = 0) const;
-        void imprimeSeries() const;        
+		bool leSerie(Serie& s, int pos) const;
+		int  getNumSeries() const;
+		bool imprimeSerie(int pos = 0) const;
+		void imprimeSeries() const;        
 
-        bool adicionaJogo(std::string t, std::string d, std::string g,
-									std::vector<std::string> n, int a);
-        bool removeJogo(Jogo& j);
+		bool adicionaJogo(std::string t, std::string d, std::string g,
+					std::vector<std::string> n, int a);
+		bool removeJogo(Jogo& j);
 		bool trocaJogo(int pos1, int pos2);
-        bool leJogo(Jogo& j, int pos) const;
-        int  getNumJogos() const;
-        bool imprimeJogo(int pos = 0) const;
-        void imprimeJogos() const;
+		bool leJogo(Jogo& j, int pos) const;
+		int  getNumJogos() const;
+		bool imprimeJogo(int pos = 0) const;
+		void imprimeJogos() const;
 };
 ```
 
@@ -97,18 +97,18 @@ Aplicando os conceitos de SRP na classe `Wishlists`, podemos refatorar o código
 
 ```cpp
 class Filmes{
-    private:
-        std::vector<Filme> filmes;
-        int numFilmes;    
+	private:
+		std::vector<Filme> filmes;
+		int numFilmes;    
 	public:
-        Filmes();
-        bool adicionaFilme(std::string t, std::string d, std::string g, int a);
-        bool removeFilme(Filme& f);
+		Filmes();
+		bool adicionaFilme(std::string t, std::string d, std::string g, int a);
+		bool removeFilme(Filme& f);
 		bool trocaFilme(int pos1, int pos2);
-        bool leFilme(Filme& f, int pos) const;
-        int  getNumFilmes() const;
-        bool imprimeFilme(int pos = 0) const;
-        void imprimeFilmes() const;
+		bool leFilme(Filme& f, int pos) const;
+		int  getNumFilmes() const;
+		bool imprimeFilme(int pos = 0) const;
+		void imprimeFilmes() const;
 };
 
 class Series{
@@ -116,14 +116,14 @@ class Series{
 		std::vector<Serie> series;
 		int numSeries;
 	public:
-		Series();
-        bool adicionaSerie(std::string t,std::string d,std::string g,int n,int a);
-        bool removeSerie(Serie& s);
+	Series();
+		bool adicionaSerie(std::string t,std::string d,std::string g,int n,int a);
+		bool removeSerie(Serie& s);
 		bool trocaSerie(int pos1, int pos2);
-        bool leSerie(Serie& s, int pos) const;
-        int  getNumSeries() const;
-        bool imprimeSerie(int pos = 0) const;
-        void imprimeSeries() const;        
+		bool leSerie(Serie& s, int pos) const;
+		int  getNumSeries() const;
+		bool imprimeSerie(int pos = 0) const;
+		void imprimeSeries() const;        
 };
 
 class Jogos{
@@ -132,13 +132,13 @@ class Jogos{
         int numJogos;
 	public:
 		bool adicionaJogo(std::string t, std::string d, std::string g,
-									std::vector<std::string> n, int a);
-        bool removeJogo(Jogo& j);
+					std::vector<std::string> n, int a);
+		bool removeJogo(Jogo& j);
 		bool trocaJogo(int pos1, int pos2);
-        bool leJogo(Jogo& j, int pos) const;
-        int  getNumJogos() const;
-        bool imprimeJogo(int pos = 0) const;
-        void imprimeJogos() const;
+		bool leJogo(Jogo& j, int pos) const;
+		int  getNumJogos() const;
+		bool imprimeJogo(int pos = 0) const;
+		void imprimeJogos() const;
 };
 ```
 Essa implementação pode ser visualizada com mais detalhes nos arquivos `.h` e `.cpp` presentes na pasta `Exemplo_2-SRP`).
@@ -164,5 +164,5 @@ Por fim, foi possível analisar a utilidade e os diversos ganhos da aplicação 
 - [**Writing Flexible Code with the Single Responsibility Principle**](https://medium.com/@severinperez/writing-flexible-code-with-the-single-responsibility-principle-b71c4f3f883f)
 
 - [**Solid — S.R.P — Single Responsibility Principle**](https://medium.com/@tbaragao/solid-s-r-p-single-responsibility-principle-2760ff4a7edc)
-- [**O que é SOLID: O guia completo para você entender os 5 princípios da POO**](hhttps://medium.com/desenvolvendo-com-paixao/o-que-%C3%A9-solid-o-guia-completo-para-voc%C3%AA-entender-os-5-princ%C3%ADpios-da-poo-2b937b3fc530)
+- [**O que é SOLID: O guia completo para você entender os 5 princípios da POO**](https://medium.com/desenvolvendo-com-paixao/o-que-%C3%A9-solid-o-guia-completo-para-voc%C3%AA-entender-os-5-princ%C3%ADpios-da-poo-2b937b3fc530)
 - [**Princípio da Responsabilidade Única**](https://medium.com/@angelomribeiro/princ%C3%ADpio-da-responsabilidade-%C3%BAnica-6d633087fa4e)
