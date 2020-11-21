@@ -20,7 +20,7 @@ Na prática isso nos diz que elementos individuais de um programa devem ser dist
 O conceito de responsabilidade nesse contexto, segundo Martin, está atrelado à "atores". Se o *software* possui diferentes usuários, -- que pode ser interpretado como diferentes desenvolvedores e colaboradores, ou diferentes domínios de conhecimento -- então os interesses de cada um desses usuários definem as responsabilidades do *software*.
 
 
-## O classe Deus ou *God class*
+## A classe Deus ou *God class*
 
 Quando não é seguido o conceito de uma classe ter apenas uma razão para ser modificada, o que encontramos é o caso de uma *God class*, que nada mais é do que uma classe responsável por diferentes recursos senão todos dentro de um projeto. O que a primeiro momento pode parecer eficiente, mas no exemplo abaixo será demonstrado o resultado real desse tipo de implementação.
 
@@ -73,7 +73,7 @@ class Favoritos{
 };
 ```
 
-Nessa implementação (que pode ser visualizada com mais detalhes no arquivo `wishlists.h` e `wishlists.cpp` presente na pasta `Exemplo_1-SRP`) podemos identificar diversas responsabilidades dividindo a mesma classe, sendo elas:
+Nessa implementação (que pode ser visualizada com mais detalhes no arquivo `favoritos.h` e `favoritos.cpp` presente na pasta `Exemplo_1-SRP`) podemos identificar diversas responsabilidades dividindo a mesma classe, sendo elas:
 - Tratamento da lista de filmes;
 - Tratamento da lista de series;
 - Tratamento da lista de jogos;
