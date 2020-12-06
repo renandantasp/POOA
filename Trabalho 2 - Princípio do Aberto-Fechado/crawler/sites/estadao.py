@@ -1,10 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-
 def get_sources():
-    result = requests.get('https://www.estadao.com.br/')
-    src = result.content
+    src = requests.get('https://www.estadao.com.br/').content
     soup = BeautifulSoup(src, 'lxml')
     all_news = []
     container = soup.find_all("a")
@@ -14,9 +12,7 @@ def get_sources():
             all_news.append(parent.find("a"))
     all_news = list(dict.fromkeys(all_news))
     
-    
     return all_news
-
 
 def get_noticias():
     sources = get_sources()

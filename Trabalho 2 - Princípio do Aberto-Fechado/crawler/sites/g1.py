@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-
 def get_noticias():
     src = requests.get("https://g1.globo.com/").content
     identifiers = ["ui-color-primary", "bstn-hl-link", "feed-post-link"]

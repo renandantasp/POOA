@@ -1,2 +1,4 @@
-/scrapper/__pycache__
+/crawler/__pycache__
+/crawler/sites/__pycache__
+/crawler/utils/__pycache__
 *.csv
