@@ -90,7 +90,7 @@ crawler:
 	    + sentiment_analysis.py
 	    + topic_classification.py
 ```
-E depois, para implementar em `main.py`
+E depois, para implementar em `main.py`:
 ```
 from crawler.machine_learning import bag_of_words, sentiment_analysis, topic_classification
 ```
