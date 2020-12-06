@@ -1,7 +1,11 @@
-import scrapper as sites
-import scrapper.newscrapper as scrapper
+from scrapper.news_to_csv import news_to_csv
+from scrapper import g1, globo, uol
 
-scrapper.news_csv(sites.G1)
-scrapper.news_csv(sites.uol)
-scrapper.news_csv(sites.globo)
-scrapper.news_csv(sites.estadao)
+uol_noticias = uol.get_noticias()
+g1_noticias = g1.get_noticias()
+globo_noticias = globo.get_noticias()
+
+news_to_csv(uol_noticias)
+news_to_csv(g1_noticias)
+news_to_csv(globo_noticias)
+
