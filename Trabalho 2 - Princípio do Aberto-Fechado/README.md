@@ -1,6 +1,4 @@
-Guilherme Locca Salomão - RA 758569
-Nathaelly Boni - RA 758963
-Renan Dantas Pasquantonio - RA 760549
+Nomes: Guilherme Locca Salomão, Nathaelly Boni, Renan Dantas Pasquantonio
 
 # 1 - Trabalho 2 - Princípio do Aberto-Fechado
 O segundo trabalho da disciplina de Programação Orientada a Objetos teve como seu objetivo construir uma ferramenta que encontre e baixe os títulos das notícias diárias nos principais sites de notícia (G1, Estadão, UOL, etc), além de respeitar os seguintes príncipios SOLID:
