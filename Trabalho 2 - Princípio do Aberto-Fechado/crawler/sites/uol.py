@@ -24,6 +24,6 @@ def get_noticias():
 #função que só retorna o titulo da noticia em questão
 def get_title(link):
     for child in link.descendants:
-        if(type(child) == type(link)):
+        if type(child) == type(link) and "class" in child.attrs:
             if "titulo" in child.attrs["class"]:
                 return child.text.strip()
